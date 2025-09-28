@@ -3,9 +3,9 @@ import { useState, useRef } from "react";
 
 export default function TechStackBox() {
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
-  const containerRef = useRef(null);
+  const containerRef = useRef<HTMLDivElement>(null);
 
-  const handleMouseMove = (e) => {
+  const handleMouseMove = (e: React.MouseEvent<HTMLDivElement>) => {
     if (containerRef.current) {
       const rect = containerRef.current.getBoundingClientRect();
       const x = e.clientX - rect.left;
@@ -18,7 +18,7 @@ export default function TechStackBox() {
     setMousePosition({ x: 0, y: 0 });
   };
 
-  const getFloatingStyle = (baseX, baseY, intensity = 0.15) => {
+  const getFloatingStyle = (baseX: number, baseY: number, intensity = 0.15) => {
     const offsetX = (mousePosition.x - baseX) * intensity;
     const offsetY = (mousePosition.y - baseY) * intensity;
     return {
