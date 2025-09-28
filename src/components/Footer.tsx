@@ -1,5 +1,5 @@
 "use client";
-import React, { useEffect, useRef } from "react";
+import React, { useRef } from "react";
 import { Heart } from "lucide-react";
 import { motion, useScroll, useTransform, useSpring } from "framer-motion";
 import Image from "next/image";
@@ -68,7 +68,7 @@ const Footer = () => {
             </h3>
             <p className="text-amber-200/80">
               Thanks for scrolling all the way down! I believe that best things
-              come to those who wait. Let's create something remarkable
+              come to those who wait. Let&apos;s create something remarkable
               together.
             </p>
             <div className="mt-4 text-xs text-amber-500/70">

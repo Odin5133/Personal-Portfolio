@@ -192,7 +192,7 @@ export default function ProjectsSection() {
                 }}
               >
                 <div className="flex items-center gap-3">
-                  <span>Let's chat</span>
+                  <span>Let&apos;s chat</span>
                 </div>
 
                 {/* Arrow inside button */}

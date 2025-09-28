@@ -1,4 +1,3 @@
-// app/template.tsx
 "use client";
 
 import { motion } from "framer-motion";
@@ -16,7 +15,8 @@ export default function Template({ children }: { children: React.ReactNode }) {
         variants={variants}
         initial="hidden"
         animate="enter"
-        transition={{ type: "linear", duration: 0.5 }}
+        // The fix is on this line
+        transition={{ type: "tween", ease: "linear", duration: 0.5 }}
       >
         {children}
       </motion.main>

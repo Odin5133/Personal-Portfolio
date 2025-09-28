@@ -23,15 +23,15 @@ export default function AboutSection() {
           <h2 className="text-4xl font-bold text-accent font-sans">About Me</h2>
           <div className="space-y-4 text-lg text-gray-700">
             <p>
-              I'm a passionate full-stack developer specializing in the MERN
-              stack, with experience building intuitive user interfaces and
+              I&apos;m a passionate full-stack developer specializing in the
+              MERN stack, with experience building intuitive user interfaces and
               scalable web applications.
             </p>
             <p>
               My journey in tech began when I built my first website at 15 and
               won many events creating SCRATCH projects and websites, and since
-              then I've been obsessed with creating digital experiences that
-              solve real problems.
+              then I&apos;ve been obsessed with creating digital experiences
+              that solve real problems.
             </p>
             <p>
               Beyond my coding work, my passions include exploring local coffee
