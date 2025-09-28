@@ -1,21 +1,66 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --font-heading: var(--font-heading); /* Advent Pro 800 italic */
+  --font-bodyHeading: var(--font-bodyHeading); /* Advent Pro 500 italic */
+  --font-sans: var(--font-body); /* Inter regular */
+  --font-name: var(--font-name); /* Pacifico regular */
+
+  --color-primary: var(--primary);
+  --color-secondary: var(--secondary);
+  --color-accent: var(--accent);
+  --color-accentlight: var(--accentlight);
+  --color-accentdark: var(--aceentdark);
+
+  /* Backgrounds & surfaces */
+  --color-bg: var(--background);
+  --color-surface: var(--surface);
+
+  /* Links & interactivity */
+  --color-link: var(--link);
+  --color-link-hover: var(--link-hover);
+  --color-disabled: var(--disabled);
+
+  /* Borders & dividers */
+  --color-border: var(--border);
+  --color-divider: var(--divider);
+
+  /* Feedback (optional) */
+  --color-success: var(--success);
+  --color-warning: var(--warning);
+  --color-error: var(--error);
+  --color-info: var(--info);
 }
 
-@media (prefers-color-scheme: dark) {
+@layer base {
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+    /* brand */
+    --primary: #17c37b;
+    --secondary: #6f6f80;
+    --accent: #17c37b;
+    --accentlight: #94f3a5;
+    --aceentdark: #3ab481;
+
+    /* surfaces */
+    --background: #f4f4f4;
+    --surface: #ffffff;
+
+    /* links */
+    --link: #0077cc;
+    --link-hover: #005fa3;
+    --disabled: #cccccc;
+
+    /* borders */
+    --border: #00ff2f;
+    --divider: #d0d0d0;
+
+    /* feedback */
+    --success: #2e7d32;
+    --warning: #ed6c02;
+    --error: #d32f2f;
+    --info: #0288d1;
   }
 }
 
@@ -23,4 +68,63 @@ body {
   background: var(--background);
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
+}
+
+@keyframes glitch {
+  0% {
+    transform: translate(0);
+  }
+  20% {
+    transform: translate(-3px, 3px);
+  }
+  40% {
+    transform: translate(-3px, -3px);
+  }
+  60% {
+    transform: translate(3px, 3px);
+  }
+  80% {
+    transform: translate(3px, -3px);
+  }
+  100% {
+    transform: translate(0);
+  }
+}
+
+.glitch-text {
+  display: inline-block;
+  position: relative;
+}
+
+.glitch-text::before,
+.glitch-text::after {
+  content: attr(data-text);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+}
+
+.group:hover .glitch-text {
+  animation: glitch 0.3s linear infinite;
+}
+
+.group:hover .glitch-text::before {
+  content: "digital experiences that";
+  color: var(--accent);
+  opacity: 0.8;
+  transform: translate(2px, -2px);
+  text-shadow: 2px 0 #000000;
+  animation: glitch 0.2s linear infinite reverse;
+}
+
+.group:hover .glitch-text::after {
+  content: "digital experiences that";
+  color: var(--aceentdark);
+  opacity: 0.8;
+  transform: translate(-2px, 2px);
+  text-shadow: -2px 0 #ffffff;
+  animation: glitch 0.4s linear infinite;
 }
