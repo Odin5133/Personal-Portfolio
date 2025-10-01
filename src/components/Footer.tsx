@@ -13,7 +13,7 @@ const Footer = () => {
   });
 
   // Create smooth scroll-linked animations
-  const y = useSpring(useTransform(scrollYProgress, [0, 1], [100, 0]), {
+  const y = useSpring(useTransform(scrollYProgress, [0, 1], [30, 0]), {
     stiffness: 50,
     damping: 15,
   });
@@ -36,7 +36,10 @@ const Footer = () => {
         <div className="flex flex-col gap-4">
           <div className="flex items-center gap-4">
             {/* Replace with your logo */}
-            <Link href="/" className="text-xl font-bold">
+            <Link
+              href="/"
+              className="text-xl font-bold bg-background rounded-full"
+            >
               <Image
                 src="/Logo.png"
                 height={80}
@@ -71,9 +74,6 @@ const Footer = () => {
               come to those who wait. Let&apos;s create something remarkable
               together.
             </p>
-            <div className="mt-4 text-xs text-amber-500/70">
-              P.S. Did you enjoy the floating orbs above? 😉
-            </div>
           </div>
         </div>
       </div>

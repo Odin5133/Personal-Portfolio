@@ -16,7 +16,7 @@ export default function AboutSection() {
   }, []);
 
   return (
-    <section className="min-h-screen flex items-center px-6 md:px-12 lg:px-24">
+    <section className="min-h-screen flex items-center px-6 md:px-12 lg:px-24 my-32 md:my-0 ">
       <div className="max-w-6xl mx-auto flex flex-col md:flex-row gap-12 items-center">
         {/* Left side - Text content */}
         <div className="md:w-1/2 space-y-6">

@@ -58,7 +58,7 @@ export default function RootLayout({
           <Sidebar />
 
           {/* Main content (80%) */}
-          <div className="w-full lg:ml-[10%] lg:w-[90%] px-4">
+          <div className="w-full lg:w-[90%] px-4">
             <main>{children}</main>
           </div>
         </div>

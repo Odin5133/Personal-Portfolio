@@ -37,9 +37,9 @@ const sidebarLinks = [
 
 export default function Sidebar() {
   const cs: string =
-    "text-black w-7 h-7 hover:text-[#15b572] hover:scale-105 transition-colors transition-transform";
+    "text-black w-7 h-7 hover:text-[#15b572] hover:scale-105 transition-colors transition-transform ";
   return (
-    <div className="hidden lg:flex flex-col items-center fixed bottom-0 left-0 w-1/10 h-full justify-end">
+    <div className="hidden lg:flex flex-col items-center sticky top-0 left-0 w-1/10 h-screen justify-end">
       {/* Icons */}
       <div className="space-y-4 flex flex-col mb-4">
         {sidebarLinks.map((link, idx) => (

@@ -6,7 +6,7 @@ export default function Hero() {
   return (
     <section
       className="flex flex-col items-center justify-center min-h-screen 
-                 px-6 text-center md:items-start md:text-left lg:px-20 text-secondary"
+                 px-6 text-center my-20 md:items-start md:text-left lg:px-20 text-secondary"
     >
       <p className="text-sm mb-2">Hello I am</p>
       <h1 className="text-5xl sm:text-6xl lg:text-9xl font-name text-accent leading-tight tracking-wider mb-6">
