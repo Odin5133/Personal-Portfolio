@@ -32,7 +32,7 @@ export default function Hero() {
             className="relative z-10 flex items-center gap-2 h-12 px-5 text-white bg-accent rounded-lg text-xl font-semibold shadow-md
    transition-transform duration-100
    group-active:-translate-x-1.5 group-active:translate-y-1.5 cursor-pointer"
-            href="https://drive.google.com/uc?export=download&id=1dcuRFPVKmntg08ZfQPPUGqu-JqD9XC10"
+            href="https://drive.google.com/file/d/1dcuRFPVKmntg08ZfQPPUGqu-JqD9XC10/view"
             target="_blank"
             rel="noopener noreferrer"
           >
