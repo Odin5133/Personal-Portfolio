@@ -81,7 +81,7 @@ export default function AboutSection() {
               {/* Back of card */}
               <div className="absolute inset-0 [backface-visibility:hidden] bg-white rounded-lg shadow-lg overflow-hidden border-2 border-gray-100 rotate-y-180">
                 <Image
-                  src="/Portrait2.jpg"
+                  src="/portrait2.jpg"
                   alt="Casual Portrait"
                   fill
                   className="object-cover"
